@@ -94,7 +94,25 @@ iframe.forEach(iframe => {
   <span class="xr_tl Normal_text xr_s2" style="left: 0px; top: 177.66px;">måste införas i samtliga </span>
   <span class="xr_tl Normal_text xr_s2" style="left: 0px; top: 208.65px;">trossamfund, utan undantag  .     <span class="Normal_text xr_s3" style="">                                                                                           </span></span>
   <span class="xr_tl Normal_text xr_s3" style="left: 0px; top: 239.63px;">.</span>
- </div>
+ </div><script>
+  const pageData = {
+    title: "Home",
+    channel: "UC8YubmlGc2EjdFvbHuHkBbA",
+    url: "https://www.youtube.com/channel/UC8YubmlGc2EjdFvbHuHkBbA",
+    site: "YouTube"
+  };
+
+  function buildCitations(data) {
+    const apa = `${data.channel}. (n.d.). <em>${data.title}</em> [YouTube channel]. ${data.site}. <a href="${data.url}">${data.url}</a>`;
+    const mla = `“${data.title}.” <em>${data.site}</em>, uploaded by ${data.channel}, n.d., <a href="${data.url}">${data.url}</a>`;
+    return `
+      <p><strong>APA:</strong> ${apa}</p>
+      <p><strong>MLA:</strong> ${mla}</p>
+    `;
+  }
+
+  document.getElementById("citeBoxBody").innerHTML = buildCitations(pageData);
+</script>
  </div>
  <div class="xr_trigo_xr_ce1" style="position:absolute;left:679px;top:667px;width:500px;height:448px;z-index:-1;"></div>
  <div class="xr_apq xr_ac" id="xr_xpxr_142" style="left:0; top:0; visibility: hidden; display: none;">
