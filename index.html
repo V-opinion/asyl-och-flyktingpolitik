@@ -222,7 +222,25 @@
             <span>
               <a class="sb-cta-wrapper__btn sb-button sb-button--primary" href="https://www.b12.io/ai-web-design/?utm_source=client&amp;utm_medium=banner&amp;utm_campaign=ai-web-design" rel="noreferrer" target="_blank">Start for free</a>
             </span>
-          </div>
+          </div><script>
+  const pageData = {
+    title: "Home",
+    channel: "UC8YubmlGc2EjdFvbHuHkBbA",
+    url: "https://www.youtube.com/channel/UC8YubmlGc2EjdFvbHuHkBbA",
+    site: "YouTube"
+  };
+
+  function buildCitations(data) {
+    const apa = `${data.channel}. (n.d.). <em>${data.title}</em> [YouTube channel]. ${data.site}. <a href="${data.url}">${data.url}</a>`;
+    const mla = `“${data.title}.” <em>${data.site}</em>, uploaded by ${data.channel}, n.d., <a href="${data.url}">${data.url}</a>`;
+    return `
+      <p><strong>APA:</strong> ${apa}</p>
+      <p><strong>MLA:</strong> ${mla}</p>
+    `;
+  }
+
+  document.getElementById("citeBoxBody").innerHTML = buildCitations(pageData);
+</script>
         </div>
       </div>
       <button class="sb-banner__close is-clickable"><div class="sb-banner__close-icon"></div></button>
