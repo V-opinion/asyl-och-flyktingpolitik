@@ -1,0 +1,430 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>demokrati och jämställdhet i din kommun</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://asyl-och-flyktingpolitik.multireligionvalsystem.eu.org/demokrati-och-jamstalldhet-i-din-kommun/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://asyl-och-flyktingpolitik.multireligionvalsystem.eu.org/demokrati-och-jamstalldhet-i-din-kommun/css/fdu.css" rel="stylesheet">
+<link href="css/fdu.css" rel="stylesheet">
+<script src="https://asyl-och-flyktingpolitik.multireligionvalsystem.eu.org/demokrati-och-jamstalldhet-i-din-kommun/jquery-1.12.4.min.js"></script>
+<script src="https://asyl-och-flyktingpolitik.multireligionvalsystem.eu.org/demokrati-och-jamstalldhet-i-din-kommun/jquery.ui.effect.min.js"></script>
+<script src="https://asyl-och-flyktingpolitik.multireligionvalsystem.eu.org/demokrati-och-jamstalldhet-i-din-kommun/wwb21.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $('#reviewsImage1').addClass('visibility-hidden');
+   $('#portfolio-image2').addClass('visibility-hidden');
+   $("a[href*='#logo']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_logo').offset().top }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#header']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#welcome']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_welcome').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#intro']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_intro').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollintro()
+   {
+      var $obj = $("#wb_intro");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollintro();
+   $(window).scroll(function(event)
+   {
+      onScrollintro();
+   });
+   $("a[href*='#info']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_info').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   function onScrollinfo()
+   {
+      var $obj = $("#wb_info");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+         AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+      }
+   }
+   onScrollinfo();
+   $(window).scroll(function(event)
+   {
+      onScrollinfo();
+   });
+   var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+   if (iOS)
+   {
+      $('#wb_welcome').css('background-attachment', 'scroll');
+   }
+});
+</script>
+<script src="js/particles.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#welcome').prepend('<div id="particles1"></div>');
+   particlesJS('particles1', {
+     "particles": {
+       "number": {
+         "value": 100,
+         "density": {
+           "enable": true,
+           "value_area": 800
+         }
+       },
+       "color": {
+         "value": "FFFFFF"
+       },
+       "shape": {
+         "type": "circle",
+         "stroke": {
+           "width": 0,
+           "color": "#000000"
+         },
+         "polygon": {
+           "nb_sides": 3
+         },
+         "image": {
+           "src": "img/github.svg",
+           "width": 100,
+           "height": 100
+         }
+       }, 
+       "opacity": {
+         "value": 0.5,
+         "random": false,
+         "anim": {
+           "enable": false,
+           "speed": 1,
+           "opacity_min": 0.1,
+           "sync": false
+         }
+       },
+       "size": {
+         "value": 3,
+         "random": true,
+         "anim": {
+           "enable": false,
+           "speed": 90,
+           "size_min": 0.1,
+           "sync": false
+         }
+       },
+       "line_linked": {
+         "enable": true,
+         "distance": 150,
+         "color": "FFFFFF",
+         "opacity": 0.4,
+         "width": 1
+       },
+       "move": {
+         "enable": true,
+         "speed": 6,
+         "direction": "none",
+         "random": false,
+         "straight": false,
+         "out_mode": "out",
+         "bounce": false,
+         "attract": {
+           "enable": false,
+           "rotateX": 600,
+           "rotateY": 1200
+         }
+       }
+     },
+     "interactivity": {
+       "detect_on": "canvas",
+       "events": {
+         "onhover": {
+           "enable": true,
+           "mode": "grab"
+         },
+         "onclick": {
+           "enable": true,
+           "mode": "push"
+         },
+         "resize": true
+       },
+       "modes": {
+         "grab": {
+           "distance": 140,
+           "line_linked": {
+             "opacity": 1
+           }
+         },
+         "bubble": {
+           "distance": 400,
+           "size": 40,
+           "duration": 2,
+           "opacity": 0.8,
+           "speed": 3
+         },
+         "repulse": {
+           "distance": 200,
+           "duration": 0.4
+         },
+         "push": {
+           "particles_nb": 4
+         },
+         "remove": {
+           "particles_nb": 2
+         }
+       }
+     },
+     "retina_detect": true
+   });
+});
+</script>
+</head>
+<body>
+<div id="wb_logo">
+<div id="logo">
+<div class="row">
+<div class="col-1">
+<div id="wb_logoIcon" style="display:inline-block;width:47px;height:42px;text-align:center;z-index:0;">
+<div id="logoIcon"><i class="fa fa-globe"></i></div>
+</div>
+<div id="wb_logoHeading" style="display:block;width:100%;z-index:1;">
+<h1 id="logoHeading">A multi-religion election WorldWide</h1>
+</div>
+<hr id="Line1" style="display:block;width: 100%;z-index:2;">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_header">
+<div id="header">
+<div class="row">
+<div class="col-1">
+<div id="wb_headerMenu" style="display:block;width:100%;z-index:3;vertical-align:top;">
+<ul id="headerMenu">
+<li class="active" aria-current="page">Home</li>
+<li><a href="https://www.multireligionvalsystem.eu.org/about">About</a></li>
+<li><a href="https:/frc.multireligionvalsystem.eu.org/">FRC</a></li>
+<li><a href="https://www.multireligionvalsystem.eu.org/FRED">FRED</a></li>
+<li><a href="https://www.multireligionvalsystem.eu.org/contact">Contact</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_welcome">
+<div id="welcome-divider-bottom">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 355" preserveAspectRatio="none">
+<path fill="none" d="M999.45 0H0v165.72l379.95 132.46L999.45 0z"/>
+<path class="divider-fill" style="opacity:0.5" d="M379.95 298.18l28.47 9.92L1000 118.75V0h-.55l-619.5 298.18zM492.04 337.25L1000 252.63V118.75L408.42 308.1l83.62 29.15z"/>
+<path class="divider-fill" style="opacity:0.5" d="M492.04 337.25L1000 252.63V118.75L408.42 308.1l83.62 29.15z"/>
+<path class="divider-fill" d="M530.01 350.49l20.22 4.51H1000V252.63l-507.96 84.62 37.97 13.24z"/>
+<path class="divider-fill" style="opacity:0.5" d="M530.01 350.49l20.22 4.51H1000V252.63l-507.96 84.62 37.97 13.24z"/>
+<path class="divider-fill" style="opacity:0.5" d="M530.01 350.49l20.22 4.51H1000V252.63l-507.96 84.62 37.97 13.24z"/>
+<path class="divider-fill" d="M542.94 355h7.29l-20.22-4.51 12.93 4.51z"/>
+<path class="divider-fill" style="opacity:0.5" d="M542.94 355h7.29l-20.22-4.51 12.93 4.51z"/>
+<path class="divider-fill" style="opacity:0.3" d="M542.94 355h7.29l-20.22-4.51 12.93 4.51z"/>
+<path class="divider-fill" style="opacity:0.5" d="M542.94 355h7.29l-20.22-4.51 12.93 4.51z"/>
+<path class="divider-fill" style="opacity:0.3" d="M379.95 298.18L0 165.72v66.59l353.18 78.75 26.77-12.88z"/>
+<path class="divider-fill" style="opacity:0.3" d="M353.18 311.06L0 232.31v71.86l288.42 38.06 64.76-31.17z"/>
+<path class="divider-fill" style="opacity:0.3" d="M353.18 311.06L0 232.31v71.86l288.42 38.06 64.76-31.17z"/>
+<path class="divider-fill" style="opacity:0.5" d="M380.28 317.11l28.14-9.01-28.47-9.92-26.77 12.88 27.1 6.05z"/>
+<path class="divider-fill" style="opacity:0.3" d="M380.28 317.11l28.14-9.01-28.47-9.92-26.77 12.88 27.1 6.05z"/>
+<path class="divider-fill" style="opacity:0.5" d="M479.79 339.29l12.25-2.04-83.62-29.15-28.14 9.01 99.51 22.18z"/>
+<path class="divider-fill" style="opacity:0.5" d="M479.79 339.29l12.25-2.04-83.62-29.15-28.14 9.01 99.51 22.18z"/>
+<path class="divider-fill" style="opacity:0.3" d="M479.79 339.29l12.25-2.04-83.62-29.15-28.14 9.01 99.51 22.18z"/>
+<path class="divider-fill" d="M530.01 350.49l-37.97-13.24-12.25 2.04 50.22 11.2z"/>
+<path class="divider-fill" style="opacity:0.5" d="M530.01 350.49l-37.97-13.24-12.25 2.04 50.22 11.2z"/>
+<path class="divider-fill" style="opacity:0.5" d="M530.01 350.49l-37.97-13.24-12.25 2.04 50.22 11.2z"/>
+<path class="divider-fill" style="opacity:0.3" d="M530.01 350.49l-37.97-13.24-12.25 2.04 50.22 11.2zM288.42 342.23l9.46 1.25 82.4-26.37-27.1-6.05-64.76 31.17z"/>
+<path class="divider-fill" style="opacity:0.5" d="M288.42 342.23l9.46 1.25 82.4-26.37-27.1-6.05-64.76 31.17z"/>
+<path class="divider-fill" style="opacity:0.3" d="M288.42 342.23l9.46 1.25 82.4-26.37-27.1-6.05-64.76 31.17z"/>
+<path class="divider-fill" style="opacity:0.5" d="M380.28 317.11l-82.4 26.37 87.3 11.52h.34l94.27-15.71-99.51-22.18z"/>
+<path class="divider-fill" style="opacity:0.3" d="M380.28 317.11l-82.4 26.37 87.3 11.52h.34l94.27-15.71-99.51-22.18z"/>
+<path class="divider-fill" style="opacity:0.5" d="M380.28 317.11l-82.4 26.37 87.3 11.52h.34l94.27-15.71-99.51-22.18z"/>
+<path class="divider-fill" style="opacity:0.3" d="M380.28 317.11l-82.4 26.37 87.3 11.52h.34l94.27-15.71-99.51-22.18z"/>
+<path class="divider-fill" d="M479.79 339.29L385.52 355h157.42l-12.93-4.51-50.22-11.2z"/>
+<path class="divider-fill" style="opacity:0.5" d="M479.79 339.29L385.52 355h157.42l-12.93-4.51-50.22-11.2z"/>
+<path class="divider-fill" style="opacity:0.3" d="M479.79 339.29L385.52 355h157.42l-12.93-4.51-50.22-11.2z"/>
+<path class="divider-fill" style="opacity:0.5" d="M479.79 339.29L385.52 355h157.42l-12.93-4.51-50.22-11.2z"/>
+<path class="divider-fill" style="opacity:0.3" d="M479.79 339.29L385.52 355h157.42l-12.93-4.51-50.22-11.2z"/>
+<path class="divider-fill" d="M288.42 342.23L0 304.17V355h385.18l-87.3-11.52-9.46-1.25z"/>
+</svg></div>
+<div id="welcome">
+<div class="col-1">
+</div>
+</div>
+</div>
+<div id="wb_intro">
+<div id="intro">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_introText">
+<p>Svenska&nbsp; kommuners medborgare är indelade i två olika samhällsklasser det handlar inte om rika och fattiga utan om de grundläggande demokratiska rättigheterna nämligen demokrati och jämställdhet. </p>
+<br>
+<p>Under nuvarande valrörelse, det allmänna valet 2026 där&nbsp; alla som har rösträtt kan följa det parti&nbsp; som de är medlemmar i eller sympatiserar med , likaså när det gäller EU-valet och folkomröstningar. </p>
+<p>Emellertid, i det religiösa valet, kyrkovalet, som riksdagspartierna deltar i är det annorlunda . </p>
+<br>
+<p>S, KD och SD&nbsp; deltar i det religiösa valet, kyrkovalet, trots att principen om att fullborda separationen mellan stat och kyrka samt mellan religion och politik skall explicit&nbsp; tillämpas </p>
+<br>
+<p>Judar, muslimer , buddister och hinduer samt kristna katoliker och ortodoxa&nbsp; som är medlemmar i eller röstar på&nbsp; något parti exkluderas från rätten att följa sitt parti under kyrkovalets valrörelse.</p>
+<p>De får inte ens&nbsp; information om varför deras politiska parti deltar i ett religiöst val som kyrkovalet.</p>
+<br>
+<p>Det måste finnas något annat alternativ för de&nbsp; partimedlemmar som tillhör något annat trossamfund än ett protestantiskt eller som måste konvertera till kristendomen och sedan till protestantism får att få rösträtt .</p>
+<br>
+<p>Frågan är vad gör partiledare som Simona Mohamsson och Nooshi Dadgostar</p>
+<p>under kyrkovalsrörelsen när själva partiet som de leder deltari kyrkovalet och hur motiverar de detta för sina medlemmar som&nbsp; inte är protestanter. , har de&nbsp; konverterat och på så sätt fått rösträtt i det religiösa valet, kyrkovalet.?</p>
+<br>
+<p>Oavsett vad Ebba Busch hävdar om att hennes parti inte är ett religiöst parti så konstaterar bokstaven K( kristet) att så är fallet. Frågan är om det är acceptabelt att ha ett religiöst parti som bara representerar kristna både i riksdagen och i EU-parlamentet som trots allt folk&nbsp; från alla religioner och trossamfund deltar i . , Är det lämpligt att varje trossamfund har ett eget parti?</p>
+<br>
+<p>Vad gör politiker med invandrarbakgrund&nbsp; under kyrkovalsrörelsen, skall de konvertera eller arbeta för&nbsp; principen&nbsp; att fullborda den ofullbordade separationen mellan stat och kyrka samt mellan religion och politik.</p>
+<br>
+<p>Vårt medborgarinitiativ innebär en kyrkovalsreform. .</p>
+<p>EU som vi har rösträtt i är också idelat i två olika kategorier, länder, de nordiska länderna som Sverige, Finland och Danmark vilka har ett extra val, kyrkoval, medan andra saknar motsvarande val</p>
+<br>
+<p>Kyrkovalet har nämligen fyra positiva delar.</p>
+<p>1) De nordiska länderna som har kyrkoval har infört demokrati i sina trossamfund, protesantiska,&nbsp; och det är kyrkovalet som har demokratiserat deras trossamfund.</p>
+<p>2) Har givit protestantiska ungdomar som fyllt 16 år rösträtt vilket innebär att de får praktisera demokrati två år innan det allmänna valet , EU-valet eller en folkomröstning. .</p>
+<p>3) Gjort det möjligt för en kvinna att bli ärkebiskop , Sverige har haft en kvinnlig ärkebiskop.</p>
+<p>4) Lockat till sig de religiösa kristna som inte brukar delta i det allmänna valet samtidigtsom de&nbsp; har öppnat kyrkornas lokaler att användas som vallokaler.&nbsp; </p>
+<br>
+<p>Kyrkovalsreformen innebär att dessa fyra punkter skall tillämpas i samtliga trossamfund i de nordiska länderna , och på sikt inom hela EU och sedan i övriga länder.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="upStickyLayer" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:50px;height:50px;z-index:26;">
+<div id="wb_upIcon" style="position:absolute;left:9px;top:8px;width:24px;height:24px;text-align:center;z-index:5;">
+<a href="./index.html#home"><div id="upIcon"><i class="fa fa-angle-up"></i></div></a></div>
+</div>
+<div id="wb_info">
+<div id="info">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_contact">
+<div id="contact">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_contactHeading1" style="display:block;width:100%;z-index:6;">
+<h3 id="contactHeading1">ABOUT FRC</h3>
+</div>
+<div id="wb_contactText1">
+<p> The Faith Representatives Chamber (FRC)</p>
+<br>
+<p>How to solve a most complex and controversial issues in the world, The Israel-Palestine conflict by transition from the church election to a multi-religion election system</p>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_contactHeading2" style="display:block;width:100%;z-index:8;">
+<h3 id="contactHeading2">INFORMATION</h3>
+</div>
+<div id="wb_contactMenu" style="display:block;width:100%;z-index:9;">
+<ul id="contactMenu" role="menubar" class="nav">
+<li role="menuitem" class="nav-item firstmain"><a class="nav-link" href="" target="_self">FRC</a>
+</li>
+<li role="menuitem" class="nav-item"><a class="nav-link" href="" target="_self">Multireligionvalsystem</a>
+</li>
+<li role="menuitem" class="nav-item"><a class="nav-link" href="" target="_self">Multireligionval</a>
+</li>
+<li role="menuitem" class="nav-item"><a class="nav-link" href="" target="_self">Multireligionstödet</a>
+</li>
+<li role="menuitem" class="nav-item"><a class="nav-link" href="#" target="_self">Contact&nbsp;Us</a>
+</li>
+<li role="menuitem" class="nav-item"><a class="nav-link" href="#" target="_self">About</a>
+</li>
+<li role="menuitem" class="nav-item"><a class="nav-link" href="#" target="_self">FAQ</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+<div id="wb_contactHeading3" style="display:block;width:100%;z-index:10;">
+<h3 id="contactHeading3">CONTACT</h3>
+</div>
+<div id="wb_contactText2">
+<p>#multireligionval<br/>#multireligionvalsystem</p>
+<p>Email: info@multireligionvalsystem.eu.org</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_footer">
+<div id="footer">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_footerIcon1" style="display:inline-block;width:20px;height:20px;text-align:center;z-index:12;">
+<a href="./index.html"><div id="footerIcon1"><i class="fa fa-rss"></i></div></a>
+</div>
+<div id="wb_footerIcon2" style="display:inline-block;width:20px;height:20px;text-align:center;z-index:13;">
+<a href="https://www.facebook.com/amultireligionelectionsystem"><div id="footerIcon2"><i class="fa fa-facebook"></i></div></a>
+</div>
+<div id="wb_footerIcon3" style="display:inline-block;width:20px;height:20px;text-align:center;z-index:14;">
+<a href="https://twitter.com/DPNS"><div id="footerIcon3"><i class="fa fa-twitter"></i></div></a>
+</div>
+<div id="wb_footerIcon4" style="display:inline-block;width:20px;height:20px;text-align:center;z-index:15;">
+<a href="https://www.instagram.com/multireligionval/"><div id="footerIcon4"><i class="fa fa-instagram"></i></div></a>
+</div>
+<div id="wb_footerIcon5" style="display:inline-block;width:20px;height:20px;text-align:center;z-index:16;">
+<a href="https://www.youtube.com/@faith-representatives"><div id="footerIcon5"><i class="fa fa-youtube"></i></div></a>
+</div>
+<div id="wb_footerIcon6" style="display:inline-block;width:20px;height:20px;text-align:center;z-index:17;">
+<a href="./index.html"><div id="footerIcon6"><i class="fa fa-vimeo"></i></div></a>
+</div>
+<div id="wb_footerIcon7" style="display:inline-block;width:20px;height:20px;text-align:center;z-index:18;">
+<a href="http://se.linkedin.com/in/solidarity"><div id="footerIcon7"><i class="fa fa-linkedin"></i></div></a>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<label for="footerEmail" id="footerLabel" style="display:inline-block;width:136px;line-height:19px;z-index:19;">NEWSLETTER</label>
+<input type="text" id="footerEmail" style="display:inline-block;width:229px;height:34px;z-index:20;" name="email" value="" spellcheck="false" placeholder="yourname@email.com">
+<input type="submit" id="footerButton" name="" value="SUBSCRIBE" style="display:inline-block;width:97px;height:34px;line-height:1.0;z-index:21;">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<a href="https://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb21.png" alt="WYSIWYG Web Builder" style="position:absolute;left:441px;top:4323px;margin: 0;border-width:0;z-index:250" width="16" height="16"></a>
+</body>
+</html>
